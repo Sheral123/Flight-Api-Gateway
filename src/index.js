@@ -1,5 +1,5 @@
 //
-//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
+//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
 
 const{ ServerConfig, Logger } = require('./config');
 
