@@ -1,6 +1,4 @@
-//
-//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
-
+//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
 const{ ServerConfig, Logger } = require('./config');
 
 const express = require('express');
