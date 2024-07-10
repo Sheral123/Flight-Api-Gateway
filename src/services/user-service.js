@@ -71,10 +71,56 @@ async function isAuthenticated(token){
     }
 }
 
+<<<<<<< HEAD
+=======
+async function addRoletoUser(data){
+    try {
+        const user = await UserRepo.get(data.id);
+        if(!user){
+            throw new AppError('no user found for the given id', StatusCodes.NOT_FOUND);
+        }
+        const role = await RoleRepo.getRoleName(data.role);
+        if(!role){
+            throw new AppError('no user found for the given role', StatusCodes.NOT_FOUND);
+        }
+        user.addRole(role);
+        return user;
+    } catch (error) {
+        if(error instanceof AppError)  throw error;
+        throw new AppError('something went wrong', StatusCodes.INTERNAL_SERVER_ERROR);
+    }
+
+}
+
+async function isAdmin(id)
+{
+    try {
+        const user = await UserRepo.get(id);
+        if(!user){
+            throw new AppError('no user found for the given id', StatusCodes.NOT_FOUND);
+        }
+        const role = await RoleRepo.getRoleName(Enums.USER_ROLES_ENUMS.ADMIN);
+        if(!role){
+            throw new AppError('no user found for the given role', StatusCodes.NOT_FOUND);
+        }
+        return user.hasRole(role)
+
+    } catch (error) {
+        if(error instanceof AppError)  throw error;
+        throw new AppError('something wnet wrong', StatusCodes.INTERNAL_SERVER_ERROR);
+    }    
+}
+>>>>>>> c3a12e3 (g)
 
 
 module.exports = {
     create,
     signin,
+<<<<<<< HEAD
     isAuthenticated
+=======
+    isAuthenticated,
+    addRoletoUser,
+    isAdmin
+>>>>>>> c3a12e3 (g)
 }
