@@ -1,5 +1,3 @@
- 
-
 const {StatusCodes} = require('http-status-codes');
 const {ErrorResponse} = require('../utills/common');
 const AppError = require('../utills/errors/app-error');
