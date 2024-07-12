@@ -71,8 +71,6 @@ async function isAuthenticated(token){
     }
 }
 
-<<<<<<< HEAD
-=======
 async function addRoletoUser(data){
     try {
         const user = await UserRepo.get(data.id);
@@ -110,17 +108,12 @@ async function isAdmin(id)
         throw new AppError('something wnet wrong', StatusCodes.INTERNAL_SERVER_ERROR);
     }    
 }
->>>>>>> c3a12e3 (g)
 
 
 module.exports = {
     create,
     signin,
-<<<<<<< HEAD
-    isAuthenticated
-=======
     isAuthenticated,
     addRoletoUser,
     isAdmin
->>>>>>> c3a12e3 (g)
 }

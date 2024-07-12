@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-//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
-=======
 //github_pat_11AVQGFQY0dLY35Bu7ZT0T_CcNIgKBATu9VVKAmZOCqCT04Fcv2RY3kai01CjqrbcCU2G6P6TKmwJIqup
->>>>>>> c3a12e3 (g)
 const{ ServerConfig, Logger } = require('./config');
 
 const express = require('express');
@@ -14,11 +10,7 @@ const app = express();
 
 const limiter = rateLimit({
 	windowMs: 2 * 60 * 1000, // 2 minutes
-<<<<<<< HEAD
-	limit: 3, // Limit each IP to 3 requests per `window` (here, per 15 minutes).
-=======
 	limit: 10, // Limit each IP to 3 requests per `window` (here, per 15 minutes).
->>>>>>> c3a12e3 (g)
 })
 
 

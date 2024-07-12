@@ -49,8 +49,6 @@ async function signin(req, res){
     }
 }
 
-<<<<<<< HEAD
-=======
 async function addRoletoUser(req, res){
     try {
         const user = await UserService.addRoletoUser({
@@ -71,15 +69,10 @@ async function addRoletoUser(req, res){
     }
 }
 
->>>>>>> c3a12e3 (g)
 
 
 module.exports= {
     signup,
-<<<<<<< HEAD
-    signin
-=======
     signin,
     addRoletoUser
->>>>>>> c3a12e3 (g)
 }

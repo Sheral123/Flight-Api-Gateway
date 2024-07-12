@@ -1,4 +1,4 @@
-//aas
+ 
 
 const {StatusCodes} = require('http-status-codes');
 const {ErrorResponse} = require('../utills/common');
@@ -31,11 +31,7 @@ async function checkAuth(req, res, next){
             req.user = response;
             next();
         }
-<<<<<<< HEAD
-    } catch (error) {
-=======
     } catch (error) {  
->>>>>>> c3a12e3 (g)
         return res
                 .status(error.statusCode)
                 .json(error);
@@ -43,8 +39,6 @@ async function checkAuth(req, res, next){
     }
 }
 
-<<<<<<< HEAD
-=======
 async function isAdmin(req, res, next){
     
     const response = await UserService.isAdmin(req.user);
@@ -60,15 +54,10 @@ async function isAdmin(req, res, next){
 
 
 
->>>>>>> c3a12e3 (g)
 
 
 module.exports = {
     validateAuthRequest,
-<<<<<<< HEAD
-    checkAuth
-=======
     checkAuth,
     isAdmin
->>>>>>> c3a12e3 (g)
 }
